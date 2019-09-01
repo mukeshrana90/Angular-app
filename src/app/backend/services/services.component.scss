@@ -1,0 +1,24 @@
+.table td, .table th {
+    vertical-align: middle;
+}
+.service__image {
+  figure {
+    margin: 0;    
+    img {
+      height: 45px;
+      width: 45px;
+      object-fit: cover;
+      border-radius: 5px;
+    }
+  }
+}
+.discount__percentage {
+    height: 35px;
+    width: 35px;
+    text-align: center;
+    line-height: 35px;
+    border-radius: 30px;
+    background: var(--teal);    
+    color: #fff;
+    font-weight: 700;
+}

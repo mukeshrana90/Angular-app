@@ -8,6 +8,7 @@ import { HeaderComponent } from './backend/common/header/header.component';
 import { ServicesComponent } from './backend/services/services.component';
 import { OrdersComponent } from './backend/orders/orders.component';
 import { AddServicesComponent } from './backend/services/add-services/add-services.component';
+import { DashboardComponent } from './backend/dashboard/dashboard.component';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { AddServicesComponent } from './backend/services/add-services/add-servic
     HeaderComponent,
     ServicesComponent,
     OrdersComponent,
-    AddServicesComponent
+    AddServicesComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,

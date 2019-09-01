@@ -1,25 +1,43 @@
 <div class="all-services-container mt-3">
-        <div class="container">
+    <div class="container">
+        <div class="d-flex justify-content-between">
             <h2>Services</h2>
-            <table class="table mt-3">
-                <thead>
-                    <tr>
-                        <th>Image</th>
-                        <th>Name</th>                                                
-                        <th>price</th>
-                        <th>Description</th>                        
-                        <th>Actions</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>image</td>
-                        <td>Service Name</td>
-                        <td>2400</td>                        
-                        <td>Service Description</td>
-                        <td>edit/delete</td>
-                    </tr>
-                </tbody>
-            </table>
+            <div><button class="btn btn-sm btn-primary" data-toggle="modal" data-target="#exampleModal">Add
+                    Services</button></div>
         </div>
+        <table class="table mt-3">
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Original Price</th>
+                    <th>Sale Price</th>
+                    <th>Discount %</th>
+                    <th>Description</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let service of services">
+                    <td>
+                        <div class="service__image">
+                            <figure><img src="../../../assets/services/{{service.imagePath}}" alt=""></figure>
+                        </div>
+                    </td>
+                    <td>{{service.name}}</td>
+                    <td>{{service.originalPrice}}</td>
+                    <td>{{service.salePrice}}</td>
+                    <td>
+                        <div class="discount__percentage">
+                            {{ (service.originalPrice - service.salePrice) / service.originalPrice *100 | number:'1.0-0'}}
+                        </div>
+                    </td>
+                    <td>{{service.description}}</td>
+                    <td>edit/delete</td>
+                </tr>
+            </tbody>
+        </table>
     </div>
+</div>
+
+<app-add-services></app-add-services>
